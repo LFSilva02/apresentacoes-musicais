@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  padding: 20px;
 }
 
 .titulo {
@@ -37,11 +38,12 @@ body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 24px;
-  padding: 20px;
+  padding: 0 0 20px 0; /* apenas padding inferior */
   align-items: center;
-  scroll-padding-left: 20px;
   scroll-behavior: smooth;
+  margin: 0;
 }
+
 
 .item {
   flex: 0 0 240px;
@@ -92,10 +94,9 @@ body {
   text-align: center;
 }
 
-/* Ajustes para celular */
 @media (max-width: 768px) {
   .item {
-    flex: 0 0 70vw;
+    flex: 0 0 80vw; /* ocupa 80% da largura da tela */
     max-width: none;
   }
 }
